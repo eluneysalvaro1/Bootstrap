@@ -20,13 +20,12 @@ w.addEventListener("resize", e => {
         secondCol.classList.add('text-end')
         firstCol.classList.replace('col-4', "col-6")
         secondCol.classList.replace('col-4', "col-6")
-        thirdCol.classList.replace("col-4", "row")
+        thirdCol.classList.replace("col-4", "container-fluid")
         thirdCol.classList.replace("bg-danger", "bg-success")
     }
 })
 
-scroll = d.scroll
-console.log(scroll)
+
 
 // d.addEventListener("scroll", e => {
 //             scroll = d.scroll
