@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Ejercicio Final</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Grupo Buenardo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio1.html">Ejercicio 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio2.html">Ejercicio 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio3.html">Ejercicio 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio4.html">Ejercicio 4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio5.html">Ejercicio 5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio6.html">Ejercicio 6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio7.html">Ejercicio 7</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio8.html">Ejercicio 8</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio9.html">Ejercicio 9</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicio10.html">Ejercicio 10</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ejercicioFinal.html">Ejercicio Final</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="header" class="p-2" style="background-color: greenyellow;" align="center">
+            <span>Header</span>
+        </div>
+        <div class="container">
+            <!-- Bootstrap trabaja con 12 columnas
+            d es display
+            col-3 es tamaño 3 de columnas
+            pt-5 es padding top 5
+            pb-5 es padding bot
+            p es padding
+            mt es margin top
+            order-md-x order-x ordena las columnas, tambien se puede usar varias clases para diferentes tamaños en un solo objeto
+            col-sm-x col-md-3 se puede combinar en un solo elemento para definir los tamaños en columnas de ese elemento en cada tipo de resolucion -->
+            <!-- justify-content-center -->
+            <div class="container-lg row">
+                <div id="invisible1" class="col-3 pt-5 pb-5 d-none d-lg-block" align="center"></div>
+                <div id="1" class="col-sm-6 col-md-3 pt-5 pb-5" style="background-color: lightblue;" align="center">
+                    <span>1</span>
+                </div>
+                <div id="2" class="col-sm-6 col-md-3 pt-5 pb-5" style="background-color: lightblue;" align="center">
+                    <span>2</span>
+                </div>
+                <div id="invisible2" class="col-3 pt-5 pb-5 d-none d-lg-block" align="center"></div>
+                <!-- justify-content-between -->
+                <div id="3" class="col-sm-6 col-md-3 pt-5 pb-5" style="background-color: lightblue;" align="center">
+                    <span>3</span>
+                </div>
+                <div id="invisible2" class="col-3 pt-5 pb-5 d-none d-lg-block" align="center"></div>
+                <div id="invisible2" class="col-3 pt-5 pb-5 d-none d-lg-block" align="center"></div>
+                <div id="4" class="col-sm-6 col-md-3 pt-5 pb-5" style="background-color: lightblue;" align="center">
+                    <span>4</span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div id="Desktop" class="col p-3 d-none d-md-block d-lg-none d-xl-none" style="background-color: lightskyblue;" align="center">
+                    <span>Tablet</span>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div id="a" class="order-lg-4 col-sm-6 col-md-3 col-lg-3 pt-5 pb-5" style="background-color: gray;" align="center">
+                    <span>a</span>
+                </div>
+                <div id="b" class="order-lg-3 col-sm-6 col-md-3 col-lg-3 pt-5 pb-5" style="background-color: gray;" align="center">
+                    <span>b</span>
+                </div>
+                <div id="c" class="order-lg-2 col-sm-6 col-md-3 col-lg-3 pt-5 pb-5" style="background-color: gray;" align="center">
+                    <span>c</span>
+                </div>
+                <div id="d" class="order-lg-1 col-sm-6 col-md-3 col-lg-3 pt-5 pb-5" style="background-color: gray;" align="center">
+                    <span>d</span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div id="Desktop" class="col p-3 d-lg-block d-none" style="background-color: lightskyblue;" align="center">
+                    <span>Desktop</span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div id="Desktop" class="col p-3 d-sm-block d-lg-none d-xl-none d-md-none" style="background-color: lightskyblue;" align="center">
+                    <span>Mobile</span>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center">
+                <div id="triste" class="order-lg-1 order-md-2 col-md-6 col-md-pull-6 col-lg-3 pt-5 pb-5 d-md-block d-xl-block d-none" style="background-color: orange;" align="center">
+                    <span>:(</span>
+                </div>
+                <div id="feliz" class="order-lg-2 order-md-1 col-sm col-md-6 col-md-push-6 col-lg-3 pt-5 pb-5" style="background-color: orange;" align="center">
+                    <span>:D</span>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="footer" class="p-2 d-lg-block d-md-block d-xl-block d-none" style="background-color: greenyellow;" align="center">
+            <span>Footer</span>
+        </div>
+    </main>
+
+
+
+
+
+
+    <!-- <footer class="bg-dark text-light p-4" id="footer">
+        <div class="d-flex justify-content-evenly align-items-center">
+            <div>
+                <h4>Todo se hace con ❤</h4>
+            </div>
+            <div>
+                <p>Terminos y condiciones Copyright</p>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ejercicios
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Ejercicio 1</a></li>
+                    <li><a class="dropdown-item" href="./ejercicio1.html">Ejercicio 2</a></li>
+                    <li><a class="dropdown-item" href="#">Ejercicio 3</a></li>
+                    <li><a class="dropdown-item" href="#">Ejercicio 4</a></li>
+                    <li><a class="dropdown-item" href="#">Ejercicio 5</a></li>
+                    <li><a class="dropdown-item" href="#">Ejercicio 6</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
