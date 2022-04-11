@@ -17,9 +17,9 @@ w.addEventListener("resize", e => {
     widht = w.innerWidth
     if (widht <= s) {
         sFunc()
-    } else if (widht >= md && widht < lg) {
+    } else if (widht >= md && widht < xl) {
         mFunc()
-    } else if (widht >= lg) {
+    } else if (widht >= xl) {
         lgFunc()
     }
 })
@@ -30,7 +30,7 @@ const sFunc = () => {
     header.classList.remove('bg-primary', 'bg-success', 'text-start')
     header.classList.add('bg-warning', 'text-center')
         //Primer Columna
-    firstCol.classList.remove('col-6', 'col-4')
+    firstCol.classList.remove('col-6', 'col-4', 'text-center')
     firstCol.classList.add('text-start', 'col-12')
         //Segunda Columna
     secondCol.classList.remove('text-end', 'bg-danger', 'col-4')
@@ -69,14 +69,14 @@ const mFunc = () => {
 
 const lgFunc = () => {
     //Header
-    header.classList.remove('bg-warning', 'bg-success', 'text-center', 'bg-primary')
+    header.classList.remove('bg-warning', 'bg-success', 'bg-primary', 'text-center', 'bg-primary')
     header.classList.add('bg-success', 'text-start')
         //Primer Columna
     firstCol.classList.remove('col-6', 'col-12', 'text-start')
     firstCol.classList.add('text-center', 'col-4')
         //Segunda Columna
-    secondCol.classList.remove('col-12', 'col-6', 'bg-secondary', 'text-end')
-    secondCol.classList.add('text-center', 'col-4')
+    secondCol.classList.remove('col-12', 'col-6', 'bg-primary', 'text-end')
+    secondCol.classList.add('text-center', 'col-4', 'bg-danger')
         //Tercer Columna
     thirdCol.classList.remove('col-6', 'col-12', 'bg-success', 'text-end')
     thirdCol.classList.add("bg-danger", 'col-4', 'text-center')
@@ -95,62 +95,62 @@ function seleccion(rutaimg) {
         case '../helpers/img/img (1).jpg':
             var sel = document.getElementById('img1');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 1';
+            contexto.textContent = 'Aunque hay veces que creemos que perdemos... en realidad ganamos';
             break;
         case '../helpers/img/img (2).jpg':
             var sel = document.getElementById('img2');
             var contexto = metodoReutilizable();
-            contexto.textContent = "Descripcion 2";
+            contexto.textContent = "Tipico entrenamiento para los hombros! Elevaciones Frontales";
             break;
         case '../helpers/img/img (3).jpg':
             var sel = document.getElementById('img3');
             var contexto = metodoReutilizable();
-            contexto.textContent = "Descripcion 3";
+            contexto.textContent = "Tomar el tiempo y pulsaciones... Todo lo requerido para saber sobre tu progreso";
             break;
         case '../helpers/img/img (4).jpg':
             var sel = document.getElementById('img4');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 4';
+            contexto.textContent = 'La importancia del cardio en la vida humana... es increible, hay que hacer cardio';
             break;
         case '../helpers/img/img (5).jpg':
             var sel = document.getElementById('img5');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 5';
+            contexto.textContent = 'Corre... señor... corree...';
             break;
         case '../helpers/img/img (6).jpg':
             var sel = document.getElementById('img6');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 6';
+            contexto.textContent = 'Tipico ejercicio que nos ayuda a trabajar cardio y abdomen';
             break;
         case '../helpers/img/img (7).jpg':
             var sel = document.getElementById('img7');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 7';
+            contexto.textContent = 'Ejercicio mata hombres';
             break;
         case '../helpers/img/img (8).jpg':
             var sel = document.getElementById('img8');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 8';
+            contexto.textContent = 'Momento exacto en el que replanteas si seguir o no... hay que seguir';
             break;
         case '../helpers/img/img (9).jpg':
             var sel = document.getElementById('img9');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 9';
+            contexto.textContent = 'Deadlift is the key';
             break;
         case '../helpers/img/img (10).jpg':
             var sel = document.getElementById('img10');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 10';
+            contexto.textContent = 'La tecnica es lo mas importante a la hora de realizar cualquier actividad';
             break;
         case '../helpers/img/img (11).jpg':
             var sel = document.getElementById('img11');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 11';
+            contexto.textContent = 'Caerse por tener los cordones desatados?... no lo creo';
             break;
         case '../helpers/img/img (12).jpg':
             var sel = document.getElementById('img12');
             var contexto = metodoReutilizable();
-            contexto.textContent = 'Descripcion 12';
+            contexto.textContent = 'Las sesiones de estiramiento post entreno, claves para el desarrollo adecuado del musculo';
             break;
     }
 

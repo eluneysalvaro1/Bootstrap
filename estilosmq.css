@@ -1,0 +1,88 @@
+@media screen {
+    @media (max-widht: 768px){
+        main{
+            color: rgb(193, 193, 193);
+        }
+    }    
+} 
+
+
+/* 
+Los media queries funcionan por orden de tamaño, del mayor al menor
+X-Small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
+*/
+@media only screen and (min-width: 991px) {
+    #colum1 {
+        text-align: center;
+        background-color: red;
+        padding-bottom: 200px;
+    }
+    #colum2 {
+        text-align: center;
+        background-color: red;
+        padding-bottom: 200px;
+    }
+    #colum3 {
+        text-align: center;
+        background-color: red;
+        padding-bottom: 200px;
+    }
+    #Foot1 {
+        text-align:end;
+    }
+    #Foot2{
+        text-align:start;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #colum1 {
+        background-color: red;
+        padding-bottom: 100px;
+    }
+    #colum2 {
+        text-align:end;
+        background-color: red;
+        padding-bottom: 100px;
+    }
+    #colum3 {
+        text-align: center;
+        background-color: greenyellow;
+        padding-bottom: 100px;
+    }
+    #Foot1 {
+        text-align:center;
+    }
+    #Foot2{
+        text-align:center;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #colum1 {
+        background-color: red;
+        padding-bottom: 100px;
+    }
+    #colum2 {
+        text-align: center;
+        background-color: lightskyblue;
+        padding-bottom: 100px;
+    }
+    #colum3 {
+        text-align:end;
+        background-color: red;
+        padding-bottom: 100px;
+    }
+    #Foot1 {
+        text-align:center;
+    }
+    #Foot2{
+        text-align:center;
+    }
+}
+
