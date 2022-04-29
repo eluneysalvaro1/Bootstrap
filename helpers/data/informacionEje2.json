@@ -1,0 +1,32 @@
+[{
+        "name": "Calorias",
+        "title": "¿Que son las calorias?",
+        "dataContent": "Una caloría es una unidad de medida, pero esta no mide peso ni longitud. Una caloría es una unidad de energía. Cuando escuchas que algo contiene calorías, es una manera de describir la cantidad de energía que podría recibir tu cuerpo al consumir eso.",
+        "url": "./helpers/img/peticiones/1.jpg"
+    },
+    {
+        "name": "Quema calorica",
+        "title": "¿Como se queman las calorias?",
+        "dataContent": "El ejercicio aeróbico es la forma más eficaz de quemar calorías e incluye actividades como caminar, andar en bicicleta y nadar. Como meta general, incluye al menos 30 minutos de actividad física en tu rutina diaria.",
+        "url": "./helpers/img/peticiones/2.png"
+    },
+    {
+        "name": "Adelgazamiento",
+        "title": "¿Para que sirve adelgazar?",
+        "dataContent": "Perder peso puede reducir la presión arterial, disminuir los niveles de triglicéridos en sangre y aumentar los del colesterol HDL (comúnmente conocido como “colesterol bueno”).",
+        "url": "./helpers/img/peticiones/3.jpg"
+    },
+    {
+        "name": "Ingesta de alimentos",
+        "title": "¿Porque hay que comer?",
+        "dataContent": "El trastorno por evitación/restricción de la ingesta de alimentos es un trastorno alimentario en el que los afectados comen muy poco y/o evitan el consumo de ciertos alimentos. Las personas con trastorno por evitación/restricción de la ingesta de alimentos no tienen miedo de aumentar de peso",
+        "url": "./helpers/img/peticiones/4.jpeg"
+    },
+    {
+        "name": "Obesidad",
+        "title": "¿Que es la obesidad?",
+        "dataContent": "El sobrepeso y la obesidad se definen como una acumulación anormal o excesiva de grasa que puede ser perjudicial para la salud. El índice de masa corporal (IMC) es un indicador simple de la relación entre el peso y la talla que se utiliza frecuentemente para identificar el sobrepeso y la obesidad en los adultos",
+        "url": "../helpers/img/peticiones/5.jfif"
+    }
+
+]

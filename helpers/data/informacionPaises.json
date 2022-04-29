@@ -1,0 +1,15 @@
+[{
+        "pais": "Argentina",
+        "provincias": ["Rio Negro", "Neuquen", "Catamarca", "Buenos Aires", "Tierra del Fuego",
+            "Chubut", "Santa fe", "Misiones", "Entre Rios"
+        ]
+    },
+    {
+        "pais": "Uruguay",
+        "provincias": ["Artigas", "Canelones", "Cerro Largo", "Colonia", "Durazno", "Flores", "Florida", "Lavalleja"]
+    },
+    {
+        "pais": "Paraguay",
+        "provincias": ["Alto Paraguay", "Alto Paraná", "Amambay", "Boquerón", "Caaguazú", "Caazapá", "Canindeyú", "Central", "Concepción", "Guairá", "Itapúa", "Cordillera", "Misiones", "Ñeembucú", "Paraguarí", "Presidente Hayes", "San Pedro"]
+    }
+]

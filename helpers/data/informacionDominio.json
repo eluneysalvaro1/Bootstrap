@@ -1,0 +1,13 @@
+[{
+        "rama": "Tren-Inferior",
+        "ejercicios": ["Sentadilla", "Peso Muerto", "Press Pierna", "Estocada Bulgara", "Peso Muerto Sumo"]
+    },
+    {
+        "rama": "Tren-Superior",
+        "ejercicios": ["Vuelos laterales", "Press militar", "Press Banca Plano con barra", "Vuelos Frontales", "Curl biceps"]
+    },
+    {
+        "rama": "Tren-Medio",
+        "ejercicios": ["Abdominales bicicleta", "Plancha", "Plancha con extension de brazos", "Abdominales colgado", "Elevacion de piernas en paralelas"]
+    }
+]
