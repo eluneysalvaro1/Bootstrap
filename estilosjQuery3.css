@@ -1,0 +1,12 @@
+.disabled {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#bu {
+    border: none;
+    background: none;
+}
