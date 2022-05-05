@@ -10,11 +10,12 @@ $(document).ready(function() {
                 $("#mostrarPaises").text("");
                 let paises = "<option>Seleccione</option>";
                 let inputPais = document.getElementById("pais").value.toLowerCase();
-                data.forEach((pais) => {
-                    if (pais.descripcion.toLowerCase().includes(inputPais)) {
-                        paises += `<option>${pais.descripcion}</option>`;
+                $.each(data, function(i, item) {
+                    if (item.descripcion.toLowerCase().includes(inputPais)) {
+                        paises += `<option>${item.descripcion}</option>`;
                     }
                 });
+                console.log(paises);
                 $("#mostrarPaises").append(paises);
             });
         },
@@ -24,8 +25,9 @@ $(document).ready(function() {
     });
 
     $("#mostrarPaises").on("change", function() {
+        console.log(document.getElementById("mostrarPaises").value);
         $.ajax({
-            url: "http://127.0.0.1:8000/api/estados/" +
+            url: "http://127.0.0.1:8000/api/paises/" +
                 document.getElementById("mostrarPaises").value,
             type: "GET",
             contentType: "application/json; charset=utf-8",
