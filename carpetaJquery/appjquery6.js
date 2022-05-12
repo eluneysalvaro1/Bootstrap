@@ -11,11 +11,14 @@ $(document).ready(function() {
                 let paises = "<option>Seleccione</option>";
                 let inputPais = document.getElementById("pais").value.toLowerCase();
                 $.each(data, function(i, item) {
-                    if (item.descripcion.toLowerCase().includes(inputPais)) {
-                        paises += `<option>${item.descripcion}</option>`;
+                    let longitudInput = inputPais.length;
+                    let subStringPais = item.descripcion.substring(0, longitudInput);
+                    // item.descripcion.toLowerCase().includes(inputPais);
+                    if (subStringPais.toLowerCase() == inputPais) {
+                        paises += `<option> ${item.descripcion} </option>`;
                     }
                 });
-                console.log(paises);
+                // console.log(paises);
                 $("#mostrarPaises").append(paises);
             });
         },
@@ -36,7 +39,7 @@ $(document).ready(function() {
                 $("#pais").on("keyup", function() {
                     $("#mostrarEstados").text("");
                 });
-                console.log(data);
+                // console.log(data);
                 $("#mostrarEstados").text("");
                 let estados;
                 data.forEach((estado) => {

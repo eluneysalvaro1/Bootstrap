@@ -14,15 +14,24 @@ if (isset($_GET['contactos'])) {
         $contactos = mysqli_fetch_all($sqlContactos, MYSQLI_ASSOC);
         echo json_encode($contactos);
     }
+    exit();
+} else if (isset($_GET['buscarContacto'])) {
+    $retorno = ['success' => 1];
+    $mail = $_GET['mail'];
+    $telefono = $_GET['telefono'];
+    $sqlContactoExistente = mysqli_query($conexionBD, "SELECT * FROM contactos WHERE Telefono = '$telefono' OR Mail = '$mail'");
+    $contactos = mysqli_fetch_all($sqlContactoExistente, MYSQLI_ASSOC);
+
+    echo json_encode($contactos);
 } else {
+    $retorno = ['success' => 0];
     $nombre = $_POST['nombre'];
     $mail = $_POST['mail'];
     $telefono = $_POST['telefono'];
     $empresa = $_POST['empresa'];
     $comentarios = $_POST['comentarios'];
-    if (($mail != "") && ($nombre != "")) {
-        $sqlEmpleaados = mysqli_query($conexionBD, "INSERT INTO contactos(Nombre, Empresa, Telefono, Mail, Comentario) VALUES('$nombre', '$empresa', '$telefono', '$mail', '$comentarios') ");
-        echo json_encode(["success" => 1]);
-    }
+    $sqlContactos = mysqli_query($conexionBD, "INSERT INTO contactos(Nombre, Empresa, Telefono, Mail, Comentario) VALUES('$nombre', '$empresa', '$telefono', '$mail', '$comentarios') ");
+    $retorno['success'] = 1;
+    echo json_encode($retorno);
     exit();
 }
