@@ -39,34 +39,94 @@ $("#enviarDatos").on("click", function(e) {
         mail: mail,
         comentarios: comentarios,
     };
-    $.ajax(
-        "http://localhost/tp2jquery/consultasBD.php?buscarContacto=1&mail=" +
-        mail +
-        "&telefono=" +
-        telefono, {
-            success: function(data) {
-                if (data.length > 0) {
-                    $("#formularioContacto").trigger("reset");
-                    alert("Los datos de contacto ya se encuentran en la base de datos");
-                } else {
-                    $.post("http://localhost/tp2jquery/consultasBD.php", datos)
-                        .done(function() {
-                            $("#formularioContacto").trigger("reset");
-                            alert("Contacto cargado");
-                        })
-                        .fail(function() {
-                            $("#formularioContacto").trigger("reset");
-                            alert("Error en la carga del contacto");
-                        });
-                }
-            },
-            error: function(error) {
-                $("#formularioContacto").trigger("reset");
-                console.log("Error en la carga del contacto (error)");
-            },
-        }
-    );
 
+    let valido = [];
+
+    const comprobacionNombre = nombre !== '' && isNaN(nombre);
+    const comprobacionEmpresa = empresa !== '';
+    const comprobacionTelefono = telefono !== '';
+    const comprobacionMail = mail !== '';
+    const comprobracionComentarios = comentarios !== '';
+
+    if (comprobacionNombre == false){
+        document.getElementById('nombre').style.borderColor = 'red';
+         valido[0] = 0;
+    }else{
+        document.getElementById('nombre').style.borderColor = 'black';
+    }
+
+    if (comprobacionEmpresa == false) {
+		document.getElementById('empresa').style.borderColor = 'red';
+        valido[1] = 0;
+	} else {
+		document.getElementById('empresa').style.borderColor = 'black';
+	}
+
+    if (comprobacionTelefono == false) {
+		document.getElementById('telefono').style.borderColor = 'red';
+        valido[2] = 0;
+	} else {
+		document.getElementById('telefono').style.borderColor = 'black';
+	}
+
+    if (comprobacionMail == false) {
+		document.getElementById('mail').style.borderColor = 'red';
+        valido[3] = 0;
+	} else {
+		document.getElementById('mail').style.borderColor = 'black';
+
+	}
+    
+    if (comprobracionComentarios == false) {
+		document.getElementById('comentarios').style.borderColor = 'red';
+        valido[4] = 0;
+	} else {
+		document.getElementById('comentarios').style.borderColor = 'black';
+	}
+
+    let comprobacion = true;
+    for (let index = 0; index < valido.length; index++) {
+        if (index == 0){
+            comprobacion = false;
+        }
+    }
+
+    if (comprobacion == true) {
+
+        $.ajax(
+			'http://localhost/tp2jquery/consultasBD.php?buscarContacto=1&mail=' +
+				mail +
+				'&telefono=' +
+				telefono,
+			{
+				success: function (data) {
+					if (data.length > 0) {
+						$('#formularioContacto').trigger('reset');
+						alert(
+							'Los datos de contacto ya se encuentran en la base de datos'
+						);
+					} else {
+						$.post('http://localhost/tp2jquery/consultasBD.php', datos)
+							.done(function () {
+								$('#formularioContacto').trigger('reset');
+								alert('Contacto cargado');
+							})
+							.fail(function () {
+								$('#formularioContacto').trigger('reset');
+								alert('Error en la carga del contacto');
+							});
+					}
+				},
+				error: function (error) {
+					$('#formularioContacto').trigger('reset');
+					console.log('Error en la carga del contacto (error)');
+				},
+			}
+		);
+
+	}
+
+    
     // $.ajax({
     //     url: "http://localhost/tp2jquery/consultasBD.php",
     //     type: "POST",

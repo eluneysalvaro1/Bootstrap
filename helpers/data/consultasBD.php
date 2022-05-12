@@ -23,6 +23,21 @@ if (isset($_GET['contactos'])) {
     $contactos = mysqli_fetch_all($sqlContactoExistente, MYSQLI_ASSOC);
 
     echo json_encode($contactos);
+    exit();
+} else if (isset($_GET['paises'])) {
+    $sqlPaises = mysqli_query($conexionBD, "SELECT * FROM paises ");
+    if (mysqli_num_rows($sqlPaises) > 0) {
+        $paises = mysqli_fetch_all($sqlPaises, MYSQLI_ASSOC);
+        echo json_encode($paises);
+    }
+    exit();
+} else if (isset($_GET['estados'])) {
+    $sqlEstados = mysqli_query($conexionBD, "SELECT * FROM estados WHERE idPais = {$_GET['estados']}");
+    if (mysqli_num_rows($sqlEstados) > 0) {
+        $estados = mysqli_fetch_all($sqlEstados, MYSQLI_ASSOC);
+        echo json_encode($estados);
+    }
+    exit();
 } else {
     $retorno = ['success' => 0];
     $nombre = $_POST['nombre'];

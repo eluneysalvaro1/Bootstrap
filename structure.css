@@ -1,0 +1,22 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.paginationjs-pages ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.paginationjs-page,
+.paginationjs-ellipsis {
+    list-style: none;
+    padding: 3px;
+}
+
+table li {
+    list-style: none;
+    padding: 3px;
+}
