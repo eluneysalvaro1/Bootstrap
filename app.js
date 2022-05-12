@@ -123,11 +123,6 @@ function seleccion(rutaimg) {
         });
     })
 
-
-
-
-
-
     function desmarcar() {
         var arrayElementos = document.getElementsByClassName('list-group-item list-group-item-action active');
         for (let i = 0; i < arrayElementos.length; i++) {
